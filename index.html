@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saif Naikwadi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navlist">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="fade-in-section">
+        <div class="hero">
+            <img src="saif.jpg" alt="Saif Naikwadi" class="profile_pic">
+            <h1 class="hero-text"><span class="auto-type"></span></h1>
+            <p class="hero-subtext">I am a programmer and I love to build stuff that solves real problems</p>
+            <div class="social-button">
+                <a href="https://github.com/Saif1107" class="social-btn" target="_blank">
+                    <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub">GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/saifnaikwadi" class="social-btn" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">LinkedIn
+                </a>
+                <a href="mailto:saifnaikwadi2005@gmail.com" class="social-btn" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">Email Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in-section">
+        <div class="about-title">
+            <h1><span class="auto-type7"></span></h1>
+        </div>
+        <div class="about-section">
+            <div class="left-about">
+                <h1 class="left-h1"><span class="auto-type3"></span></h1>
+                <p class="left-p">
+                    A builder at heart, a programmer by passion, and someone who genuinely believes that technology should do something, not just look good.
+                    I don’t code just to code. I build to solve, to simplify, and sometimes — to surprise. I love turning random ideas into real things that actually make sense in the real world.
+                    Whether it’s a small tool that saves time or a system that fixes chaos, I’m always trying to create something useful.
+                    I believe in learning by building — not waiting to be “ready,” but getting my hands dirty and figuring it out along the way.
+                    Most days, you’ll find me deep in code, obsessed with the tiniest details, or staring at the screen like it owes me answers.
+                    I’m still exploring, still learning, and still building — but one thing’s for sure: I’m just getting started.
+                </p>
+            </div>
+            <div class="divider"></div>
+            <div class="right-about">
+                <h1 class="right-h1"><span class="auto-type4"></span></h1>
+                <ul class="bio-list">
+                    <li>🎓 University: A.G. Patil Institute of Technology</li>
+                    <li>🌆 City: Solapur, Maharashtra</li>
+                    <li>📚 Course: Computer Science and Engineering</li>
+                    <li>🧠 Interests: Web / Web 3 / Cloud</li>
+                    <li>🚀 Goals: To gain global work experience by contributing to impactful tech projects abroad</li>
+                    <li>🔧 Building: 
+                        1] This Portfolio Website - A responsive, personal site to showcase my skills and journey 
+                        2] Restaurant Website - A dynamic food ordering website using HTML, CSS, JS, PHP, MySQL
+                    </li>
+                    <li>🎯 Philosophy: Build stuff that actually solves real-world problems</li>
+                    <li>🧩 Personality: Curious, self-taught, always building</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in-section">
+        <div class="project-title">
+            <h1><span class="auto-type6"></span></h1>
+        </div>
+        <div class="project-section">
+            <div class="project-card">
+                <h2 class="title">Personal Portfolio Website</h2>
+                <img src="portfolio.jpg" alt="Personal Portfolio" class="portfolio-img">
+                <p class="description">A personal portfolio built using HTML5 and CSS3. Clean, terminal-inspired dark theme, responsive layout, soft hover transitions, and typing animations for developer-centric appeal.</p>
+            </div>
+            <div class="project-card">
+                <h2 class="title">Restaurant Website</h2>
+                <img src="resto.jpg" alt="Restaurant Website" class="portfolio-img">
+                <p class="description">A dynamic food ordering website using HTML, CSS, JavaScript, PHP, and MySQL. It includes frontend design and backend customer data storage functionality.</p>
+            </div>
+        </div>
+        <div class="coming-soon">
+            <h1><span class="auto-type5"></span></h1>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in-section">
+        <div class="contact-section">
+            <div class="contact-title">
+                <h1><span class="auto-type2"></span></h1>
+            </div>
+            <div class="contact-description">
+                <p>Have a gig, freelance work, internship, or a cool idea?<br>Let’s build something awesome together.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" action="#">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        const fadeInElements = document.querySelectorAll('.fade-in-section');
+        function checkFadeIn() {
+            fadeInElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkFadeIn);
+        window.addEventListener('load', checkFadeIn);
+
+        new Typed(".auto-type", {
+            strings: ["Hey, I am Saif Naikwadi"],
+            typeSpeed: 100,
+            loop: true
+        });
+        new Typed(".auto-type2", {
+            strings: ["Let's Connect"],
+            typeSpeed: 100,
+            loop: true
+        });
+        new Typed(".auto-type3", {
+            strings: ["Hey there! - I'm Saif"],
+            typeSpeed: 100,
+            loop: true
+        });
+        new Typed(".auto-type4", {
+            strings: ["A Bit More About Me"],
+            typeSpeed: 100,
+            loop: true
+        });
+        new Typed(".auto-type5", {
+            strings: ["More Coming Soon, Stay Tuned..."],
+            typeSpeed: 100,
+            loop: true
+        });
+        new Typed(".auto-type6", {
+            strings: ["Projects"],
+            typeSpeed: 100,
+            loop: true
+        });
+        new Typed(".auto-type7", {
+            strings: ["About Me"],
+            typeSpeed: 100,
+            loop: true
+        });
+    </script>
+</body>
+</html>
